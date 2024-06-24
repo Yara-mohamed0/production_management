@@ -87,6 +87,11 @@ class AppFonts {
     color: AppColors.greyColor,
   );
 
+  static TextStyle font18W700Black = GoogleFonts.scheherazadeNew(
+      fontSize: 18.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: AppColors.blackColor);
+
   static TextStyle font20W700Primary = GoogleFonts.scheherazadeNew(
       fontSize: 20.sp,
       fontWeight: FontWeightHelper.bold,
@@ -97,6 +102,11 @@ class AppFonts {
       fontWeight: FontWeightHelper.bold,
       color: AppColors.blackColor);
 
+  static TextStyle font20W700OrText = GoogleFonts.scheherazadeNew(
+      fontSize: 20.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: AppColors.orText);
+
   static TextStyle font24W700Black = GoogleFonts.scheherazadeNew(
       fontSize: 34.sp,
       fontWeight: FontWeightHelper.bold,
@@ -106,6 +116,11 @@ class AppFonts {
       fontSize: 27.sp,
       fontWeight: FontWeightHelper.bold,
       color: AppColors.blackColor);
+
+  static TextStyle font28W700Primary = GoogleFonts.scheherazadeNew(
+      fontSize: 28.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: AppColors.mainColor);
 
   static TextStyle font32W700Primary = GoogleFonts.scheherazadeNew(
       fontSize: 32.sp,
@@ -269,6 +284,11 @@ class AppFonts {
       fontSize: 14.sp,
       fontWeight: FontWeightHelper.regular,
       color: AppColors.mainColor);
+
+  static TextStyle font14W400AccentColor= GoogleFonts.scheherazadeNew(
+      fontSize: 14.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: AppColors.accentColor);
 
   static TextStyle font14W400TextGreen = GoogleFonts.scheherazadeNew(
       fontSize: 14.sp,

@@ -4,6 +4,7 @@ import 'package:production_management/core/theming/styles.dart';
 
 import '../../../../core/shared_widgets/shared_button.dart';
 import '../../../../core/theming/colors.dart';
+import '../../../login/ui/screen/login_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -50,20 +51,12 @@ class StartScreen extends StatelessWidget {
                           Expanded(
                             child: SharedButton(
                               function: () {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //     builder: (context) => PatientDetails(
-                                //       function: () {
-                                //         Navigator.push(
-                                //             context,
-                                //             MaterialPageRoute(
-                                //                 builder: (context) =>
-                                //                 const PaymentScreen()));
-                                //       },
-                                //     ),
-                                //   ),
-                                // );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => LoginScreen()
+                                  ),
+                                );
                               },
                               color: AppColors.mainColor,
                               text: "تسجيل الدخول",
