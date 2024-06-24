@@ -12,6 +12,17 @@ class AppFonts {
       color: AppColors.mainColor);
 
   //700
+  static TextStyle font12W700HomeNameColor = GoogleFonts.scheherazadeNew(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.homeNameColor,
+  );
+
+  static TextStyle font12W700ChartDetailsColor = GoogleFonts.scheherazadeNew(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.chartDetailsColor,
+  );
 
   static TextStyle font14W700White = GoogleFonts.scheherazadeNew(
     fontSize: 14.sp,
@@ -221,6 +232,13 @@ class AppFonts {
       color: AppColors.whiteColor);
 
   //500
+
+  static TextStyle font12W500HomeNameColor = GoogleFonts.scheherazadeNew(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.homeNameColor,
+  );
+
   static TextStyle font14W500Black = GoogleFonts.scheherazadeNew(
       fontSize: 14.sp,
       fontWeight: FontWeightHelper.medium,

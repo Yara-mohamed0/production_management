@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 abstract class AppColors {
   //main colors
   static const Color mainColor = Color(0xff086C6A);
+  static const Color appBackgroundColor=Color(0xffF9FAFC);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
 
@@ -22,6 +23,10 @@ abstract class AppColors {
   static const Color ratingBackgroundGrey = Color(0xffF8F8F8);
   static const Color orText = Color(0xff64748B);
   static const Color serviceConditions = Color(0xff484848);
+  static const Color homeNameColor = Color(0xff4E4E4E);
+  static const Color chartDetailsColor = Color(0xff565656);
+  static const Color chartBarColor = Color(0xff8D79F6);
+
 //red color
   static const Color redColor = Color(0xffCE0909);
   static const Color fireColor = Color(0xffE8899E);
@@ -46,4 +51,6 @@ abstract class AppColors {
 //green color
   static const Color limeGreen = Color(0xffE2F8E3);
   static const Color textGreen = Color(0xff04AD01);
+  static const Color lightGreen = Color(0xffEFFBFB);
+
 }
