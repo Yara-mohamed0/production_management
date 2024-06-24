@@ -57,6 +57,18 @@ class AppFonts {
     color: AppColors.lightGrey,
   );
 
+  static TextStyle font16W700Primary = GoogleFonts.scheherazadeNew(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.mainColor,
+  );
+
+  static TextStyle font16W700White = GoogleFonts.scheherazadeNew(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.whiteColor,
+  );
+
   static TextStyle font16W700GreyColor = GoogleFonts.scheherazadeNew(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.bold,
@@ -269,5 +281,7 @@ class AppFonts {
       color: AppColors.textRed);
 
   static TextStyle font16W400Black = GoogleFonts.scheherazadeNew(
-      fontSize: 16.sp, fontWeight: FontWeight.w400, color: AppColors.blackColor);
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.blackColor);
 }
