@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: S.delegate.supportedLocales,
           locale: const Locale("ar"),
-          home: const StartScreen(),
+          // home: const StartScreen(),
         );
       },
     );
