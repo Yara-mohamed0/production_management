@@ -9,6 +9,7 @@ import '../../../../../core/theming/colors.dart';
 import '../../../../core/shared_widgets/default_text_form_field.dart';
 import '../../../../core/theming/styles.dart';
 
+import '../../../signup/ui/screen/signup_page.dart';
 import '../../logic/cubit/cubit.dart';
 import '../../logic/cubit/state.dart';
 import 'forget_password_bottomsheet.dart';
@@ -77,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                             height: 19.h,
                           ),
                           Text(
-                            'كلمة المرور',
+                            'كلمة السر',
                             style: AppFonts.font18W700Primary,
                           ),
                           SizedBox(
@@ -146,10 +147,10 @@ class LoginScreen extends StatelessWidget {
                               ),
                               TextButton(
                                 onPressed: () {
-                                  // Navigator.push(
-                                  //     context,
-                                  //     MaterialPageRoute(
-                                  //         builder: (context) => SignUp()));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => SignUp()));
                                 },
                                 child: Text(
                                   " انشئ حساب",

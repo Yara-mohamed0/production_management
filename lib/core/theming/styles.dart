@@ -43,6 +43,18 @@ class AppFonts {
     color: AppColors.blackColor,
   );
 
+  static TextStyle font14W700ServiceConditions = GoogleFonts.scheherazadeNew(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.serviceConditions,
+  );
+
+  static TextStyle font14W700AccentColor = GoogleFonts.scheherazadeNew(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.accentColor,
+  );
+
   static TextStyle font15W700White = GoogleFonts.scheherazadeNew(
       fontSize: 15.sp, fontWeight: FontWeightHelper.bold, color: Colors.white);
 
@@ -290,7 +302,7 @@ class AppFonts {
       fontWeight: FontWeightHelper.regular,
       color: AppColors.mainColor);
 
-  static TextStyle font14W400AccentColor= GoogleFonts.scheherazadeNew(
+  static TextStyle font14W400AccentColor = GoogleFonts.scheherazadeNew(
       fontSize: 14.sp,
       fontWeight: FontWeightHelper.regular,
       color: AppColors.accentColor);
