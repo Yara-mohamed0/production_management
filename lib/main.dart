@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import 'core/theming/colors.dart';
-import 'features/start_screen/ui/screen/start_screen.dart';
+
 import 'generated/l10n.dart';
-
-
 
 void main() {
   runApp(const MyApp());
