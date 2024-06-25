@@ -22,7 +22,7 @@ class BottomNavigationWidget extends StatelessWidget {
             body: cubit.bottomScreens[cubit.currentIndex],
             bottomNavigationBar: Container(
               decoration: const BoxDecoration(
-                color: AppColors.whiteColor,
+                color: AppColors.appBackgroundColor,
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(30),
                     topLeft: Radius.circular(30)),
@@ -40,7 +40,7 @@ class BottomNavigationWidget extends StatelessWidget {
                   curve: Curves.easeInCirc,
                   gap: 3,
                   padding: const EdgeInsets.all(10),
-                  backgroundColor: AppColors.whiteColor,
+                  backgroundColor: AppColors.appBackgroundColor,
                   color: AppColors.greyColor,
                   activeColor: AppColors.mainColor,
                   onTabChange: (index) {

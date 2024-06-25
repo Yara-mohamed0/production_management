@@ -65,13 +65,15 @@ class LoginScreen extends StatelessWidget {
                               color: AppColors.lightGrey,
                             ),
                             validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'برجاء ادخل البريد الالكتروني';
-                              } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
-                                  .hasMatch(value)) {
-                                return 'برجاء ادخل بريد الكتروني متاح';
-                              }
                               return null;
+
+                              // if (value == null || value.isEmpty) {
+                              //   return 'برجاء ادخل البريد الالكتروني';
+                              // } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
+                              //     .hasMatch(value)) {
+                              //   return 'برجاء ادخل بريد الكتروني متاح';
+                              // }
+                              // return null;
                             },
                           ),
                           SizedBox(
