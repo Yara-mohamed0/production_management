@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../../../../core/theming/colors.dart';
@@ -38,6 +39,123 @@ class CircularChart extends StatelessWidget {
                 yValueMapper: (ChartData data, _) => data.value,
                 trackColor: Colors.grey.shade200,
               )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 12.0.w,
+                        height: 12.0.h,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.whiteColor,
+                          border:
+                              Border.all(color: const Color(0xff04BFDA), width: 2),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: AppColors.lightGrey,
+                              blurRadius: 2,
+                              offset: Offset(0, 2),
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
+                      Text(
+                        'بن',
+                        style: AppFonts.font16W700Grey,
+                      ),
+                    ],
+                  ),
+                  Text(
+                    '60 وحدة',
+                    style: AppFonts.font16W700Grey,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 12.0.w,
+                        height: 12.0.h,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.whiteColor,
+                          border: Border.all(
+                            color: const Color(0xffFFA84A),
+                            width: 2,
+                          ),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: AppColors.lightGrey,
+                              blurRadius: 2,
+                              offset: Offset(0, 2),
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
+                      Text(
+                        'تمر',
+                        style: AppFonts.font16W700Grey,
+                      ),
+                    ],
+                  ),
+                  Text(
+                    '75 وحدة',
+                    style: AppFonts.font16W700Grey,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 12.0.w,
+                        height: 12.0.h,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.whiteColor,
+                          border: Border.all(
+                            color: const Color(0xffFB67CA),
+                            width: 2,
+                          ),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: AppColors.lightGrey,
+                              blurRadius: 2,
+                              offset: Offset(0, 2),
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
+                      Text(
+                        'عسل',
+                        style: AppFonts.font16W700Grey,
+                      ),
+                    ],
+                  ),
+                  Text(
+                    '80 وحدة',
+                    style: AppFonts.font16W700Grey,
+                  ),
+                ],
+              ),
             ],
           ),
         ],

@@ -98,6 +98,11 @@ class AppFonts {
     fontWeight: FontWeightHelper.bold,
     color: AppColors.lightGrey,
   );
+  static TextStyle font16W700Grey = GoogleFonts.cairo(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.greyColor,
+  );
 
   static TextStyle font16W700Primary = GoogleFonts.cairo(
     fontSize: 16.sp,
