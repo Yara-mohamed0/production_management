@@ -122,7 +122,7 @@ class _PieChartWidgetState extends State<PieChartWidget> {
                     height: 12.0.h,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                     color:  Color(0xffFB67CA),
+                      color: Color(0xffFB67CA),
                       boxShadow: [
                         BoxShadow(
                           color: AppColors.lightGrey,
@@ -141,7 +141,6 @@ class _PieChartWidgetState extends State<PieChartWidget> {
                   ),
                 ],
               ),
-
             ],
           )
         ],
