@@ -24,6 +24,14 @@ class AppFonts {
     color: AppColors.chartDetailsColor,
   );
 
+  static TextStyle font12W700Primary = GoogleFonts.cairo(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.mainColor,
+  );
+
+
+
   static TextStyle font14W700White = GoogleFonts.cairo(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.bold,
