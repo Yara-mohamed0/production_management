@@ -86,17 +86,6 @@ class CurrentStateCard extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const ProductDetailsRow(
-              productDetail: 'الوحدات المنتجة',
-              productName: 'لبن',
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            const ProductDetailsRow(
-              productDetail: 'الجودة',
-              productName: '50%',
-            ),
           ],
         ),
       ),

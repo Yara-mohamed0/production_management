@@ -54,7 +54,6 @@ class AppFonts {
     color: AppColors.lightGreen,
   );
 
-
   static TextStyle font14W700Black = GoogleFonts.cairo(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.bold,
@@ -71,8 +70,6 @@ class AppFonts {
     fontWeight: FontWeightHelper.bold,
     color: AppColors.productDetailsGrey,
   );
-
-
 
   static TextStyle font14W700AccentColor = GoogleFonts.cairo(
     fontSize: 14.sp,
@@ -144,6 +141,12 @@ class AppFonts {
       fontWeight: FontWeightHelper.bold,
       color: AppColors.blackColor);
 
+  static TextStyle font20W700Grey = GoogleFonts.cairo(
+      fontSize: 20.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: AppColors.greyColor);
+
+
   static TextStyle font20W700OrText = GoogleFonts.cairo(
       fontSize: 20.sp,
       fontWeight: FontWeightHelper.bold,
@@ -158,6 +161,11 @@ class AppFonts {
       fontSize: 34.sp,
       fontWeight: FontWeightHelper.bold,
       color: AppColors.mainColor);
+
+  static TextStyle font24W700Blue = GoogleFonts.cairo(
+      fontSize: 34.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: AppColors.clockColor);
 
   static TextStyle font27W700Black = GoogleFonts.cairo(
       fontSize: 27.sp,
@@ -358,4 +366,9 @@ class AppFonts {
       fontSize: 16.sp,
       fontWeight: FontWeight.w400,
       color: AppColors.blackColor);
+
+  static TextStyle font16W400TextColor = GoogleFonts.cairo(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.serviceConditions);
 }

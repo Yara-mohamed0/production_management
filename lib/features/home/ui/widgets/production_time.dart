@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-import '../../../../core/theming/colors.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../core/theming/colors.dart';import '../../../../core/theming/styles.dart';
 import 'circle_painter.dart';
 import 'gradient_circle_painter.dart';
 
@@ -10,13 +9,12 @@ class ProductionTimeWidget extends StatefulWidget {
   const ProductionTimeWidget({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _ProductionTimeWidgetState createState() => _ProductionTimeWidgetState();
+  State<ProductionTimeWidget> createState() => _ProductionTimeWidgetState();
 }
 
 class _ProductionTimeWidgetState extends State<ProductionTimeWidget> {
-  double _currentSliderValue = 40;
-  double _timeValue = 1;
+  double _productionPercentage = 40;
+  double _selectedProductionTime = 1;
   Offset _dragPosition = Offset.zero;
 
   @override
@@ -44,30 +42,24 @@ class _ProductionTimeWidgetState extends State<ProductionTimeWidget> {
                     startColor: Colors.green,
                     endColor: Colors.blue,
                     strokeWidth: 30,
-                    timeValue: _timeValue,
+                    timeValue: _selectedProductionTime,
                   ),
                 ),
               ),
               GestureDetector(
-                onPanStart: (details) {
-                  _updateTimeValue(details.localPosition);
-                },
-                onPanUpdate: (details) {
-                  _updateTimeValue(details.localPosition);
-                },
-                onPanEnd: (_) {
-                  // Optionally add any finalization logic here
-                },
+                onPanStart: (details) => _updateProductionTime(details.localPosition),
+                onPanUpdate: (details) => _updateProductionTime(details.localPosition),
                 child: SizedBox(
                   width: 200,
                   height: 200,
                   child: Center(
                     child: CustomPaint(
                       size: const Size(200, 200),
-                      painter: CirclePainter(_dragPosition,
-                          radius: 85,
-                          timeValue:
-                              _timeValue), // Adjusted radius to fit inside the gradient circle
+                      painter: CirclePainter(
+                        _dragPosition,
+                        radius: 85,
+                        timeValue: _selectedProductionTime,
+                      ),
                     ),
                   ),
                 ),
@@ -75,7 +67,7 @@ class _ProductionTimeWidgetState extends State<ProductionTimeWidget> {
               Positioned(
                 top: 90,
                 child: Text(
-                  '${_timeValue == 0.0 ? 12 : _timeValue.toStringAsFixed(0)}h',
+                  '${_selectedProductionTime == 0.0 ? 12 : _selectedProductionTime.toStringAsFixed(0)}h',
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -88,18 +80,17 @@ class _ProductionTimeWidgetState extends State<ProductionTimeWidget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('%${(_currentSliderValue).toStringAsFixed(0)}',
-                  style: const TextStyle(fontSize: 16)),
+              Text('%${_productionPercentage.toStringAsFixed(0)}', style: const TextStyle(fontSize: 16)),
               const Text('%100', style: TextStyle(fontSize: 16)),
             ],
           ),
           Slider(
-            value: _currentSliderValue,
+            value: _productionPercentage,
             min: 0,
             max: 100,
             onChanged: (double value) {
               setState(() {
-                _currentSliderValue = value;
+                _productionPercentage = value;
               });
             },
           ),
@@ -108,24 +99,21 @@ class _ProductionTimeWidgetState extends State<ProductionTimeWidget> {
     );
   }
 
-  void _updateTimeValue(Offset position) {
+  void _updateProductionTime(Offset position) {
     RenderBox box = context.findRenderObject() as RenderBox;
     Offset center = box.size.center(Offset.zero);
     double angle = atan2(position.dy - center.dy, position.dx - center.dx);
 
-    // Ensure angle is in the range of 0 to 2*pi
     if (angle < 0) angle += 2 * pi;
 
-    // Convert angle to hours (12-hour format, starts at 12 o'clock)
     double hours = (angle / (2 * pi) * 12 + 3) % 12;
 
-    // Ensure that 0 hours is represented as 12
     if (hours == 0.0) {
       hours = 12;
     }
 
     setState(() {
-      _timeValue = hours;
+      _selectedProductionTime = hours;
       _dragPosition = position;
     });
   }

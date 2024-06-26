@@ -5,8 +5,10 @@ import '../widgets/current_state_listview.dart';
 import '../widgets/gauge_widget.dart';
 import '../widgets/historical_data_chart.dart';
 import '../widgets/home_header.dart';
+import '../widgets/percent_chart.dart';
 import '../widgets/production_details_listview.dart';
 import '../widgets/production_time.dart';
+import '../widgets/quality_control.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -62,7 +64,15 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                 const GaugeWidget(),
+                const GaugeWidget(),
+                const SizedBox(
+                  height: 16,
+                ),
+                const QualityControl(),
+                const SizedBox(
+                  height: 16,
+                ),
+                const PercentChart()
               ],
             ),
           ),
@@ -71,3 +81,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+

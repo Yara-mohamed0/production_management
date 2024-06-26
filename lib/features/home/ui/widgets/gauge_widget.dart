@@ -54,7 +54,7 @@ class GaugeWidget extends StatelessWidget {
                     knobStyle: KnobStyle(
                       color: Colors.white,
                       borderColor: Colors.white,
-                      knobRadius: 0.06,
+                      knobRadius: 0.2,
                     ),
                   )
                 ],
@@ -64,7 +64,7 @@ class GaugeWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 200),
                       child: Text(
                         'الزمن بالدقائق',
-                        style:AppFonts.font20W700Black,
+                        style:AppFonts.font20W700Grey,
                       ),
                     ),
                     positionFactor: 0.5,
