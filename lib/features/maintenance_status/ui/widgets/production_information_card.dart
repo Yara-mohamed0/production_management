@@ -85,7 +85,7 @@ class ProductionInformationCard extends StatelessWidget {
                   children: [
                     Container(
                       width: 100.0.w,
-                      height: 20.0.h,
+                      height: 15.0.h,
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(10),
@@ -94,7 +94,7 @@ class ProductionInformationCard extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         child: Container(
                           width: 70.0.w,
-                          height: 20.0.h,
+                          height: 15.0.h,
                           decoration: BoxDecoration(
                             color: Colors.red,
                             borderRadius: BorderRadius.circular(10),
