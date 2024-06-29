@@ -6,6 +6,7 @@ import '../../../../../core/shared_widgets/shared_button.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../core/shared_widgets/default_text_form_field.dart';
 import '../../../../core/theming/styles.dart';
+import '../../../otp/ui/screen/validation_code.dart';
 
 // ignore: must_be_immutable
 class ForgetPassword extends StatefulWidget {
@@ -88,13 +89,13 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                         color: AppColors.mainColor,
                         function: () {
                           if (formKey.currentState!.validate()) {
-                            // Navigator.pop(context);
-                            // Navigator.push(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => ValidationCode(
-                            //               email: emailController,
-                            //             )));
+                            Navigator.pop(context);
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ValidationCode(
+                                          email: emailController,
+                                        )));
                           }
                         },
                       ),

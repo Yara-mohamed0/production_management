@@ -50,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                           Text(
                             'البريد الالكتروني',
-                            style: AppFonts.font18W700Black,
+                            style: AppFonts.font18W700Primary,
                           ),
                           SizedBox(
                             height: 8.h,
@@ -78,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                           Text(
                             'كلمة المرور',
-                            style: AppFonts.font18W700Black,
+                            style: AppFonts.font18W700Primary,
                           ),
                           SizedBox(
                             height: 8.h,

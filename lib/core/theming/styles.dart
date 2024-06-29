@@ -92,6 +92,11 @@ class AppFonts {
       fontWeight: FontWeightHelper.bold,
       color: AppColors.blackColor);
 
+  static TextStyle font18W700Primary = GoogleFonts.scheherazadeNew(
+      fontSize: 18.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: AppColors.mainColor);
+
   static TextStyle font20W700Primary = GoogleFonts.scheherazadeNew(
       fontSize: 20.sp,
       fontWeight: FontWeightHelper.bold,

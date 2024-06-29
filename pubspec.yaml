@@ -36,6 +36,7 @@ dependencies:
     sdk: flutter
   bloc:
   flutter_bloc:
+  timer_count_down:
 # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
