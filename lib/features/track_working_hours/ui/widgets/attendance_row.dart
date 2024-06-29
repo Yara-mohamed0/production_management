@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
+import '../screen/add_employee.dart';
 
 class AttendanceRow extends StatelessWidget {
   const AttendanceRow({
@@ -21,30 +22,41 @@ class AttendanceRow extends StatelessWidget {
         Row(
           children: [
             GestureDetector(
-              onTap: (){},
+              onTap: () {},
               child: Container(
                 width: 42.0.w,
                 height: 42.0.h,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   color: AppColors.searchBackgroundColor,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Icon(Icons.delete_outline_outlined,color: AppColors.textRed,),
+                child: const Icon(
+                  Icons.delete_outline_outlined,
+                  color: AppColors.textRed,
+                ),
               ),
             ),
-            const SizedBox(width: 8,),
+            const SizedBox(
+              width: 8,
+            ),
             GestureDetector(
-              onTap: (){},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AddEmployee()));
+              },
               child: Container(
                 width: 42.0.w,
                 height: 42.0.h,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   color: AppColors.mainColor,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Icon(Icons.add,color: AppColors.whiteColor,),
+                child: const Icon(
+                  Icons.add,
+                  color: AppColors.whiteColor,
+                ),
               ),
             ),
           ],

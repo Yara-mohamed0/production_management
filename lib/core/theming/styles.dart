@@ -128,6 +128,13 @@ class AppFonts {
     color: AppColors.redColor,
   );
 
+
+  static TextStyle font16W700BlackColor = GoogleFonts.cairo(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.blackColor,
+  );
+
   static TextStyle font17W700GreyColor = GoogleFonts.cairo(
     fontSize: 17.sp,
     fontWeight: FontWeightHelper.bold,

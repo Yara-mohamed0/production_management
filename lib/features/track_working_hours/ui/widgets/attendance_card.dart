@@ -5,6 +5,7 @@ import 'package:production_management/features/track_working_hours/ui/widgets/at
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../core/shared_widgets/default_line.dart';
+import '../screen/edit_attendance.dart';
 
 class AttendanceCard extends StatelessWidget {
   const AttendanceCard({super.key});
@@ -93,7 +94,12 @@ class AttendanceCard extends StatelessWidget {
                   width: 5,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => EditAttendance()));
+                  },
                   icon: const Icon(
                     Icons.edit,
                     color: AppColors.clockColor,
