@@ -67,6 +67,11 @@ class AppFonts {
     fontWeight: FontWeightHelper.bold,
     color: AppColors.blackColor,
   );
+  static TextStyle font14W700Green = GoogleFonts.cairo(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.textGreen,
+  );
 
   static TextStyle font14W700ServiceConditions = GoogleFonts.cairo(
     fontSize: 14.sp,
