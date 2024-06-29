@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:production_management/features/home/ui/screen/home_screen.dart';
 
+import '../../../track_working_hours/ui/screen/track_working_hours_screen.dart';
+import '../../ui/screens/home_screen.dart';
 import 'state.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
@@ -11,11 +12,11 @@ class HomeCubit extends Cubit<HomeStates> {
 
   int currentIndex = 0;
 
+  String? attendanceRecord;
+
   List<Widget> bottomScreens = [
     const HomeScreen(),
-    Container(
-      color: Colors.purple,
-    ),
+    const TrackWorkingHoursScreen(),
     Container(
       color: Colors.deepPurple,
     ),
@@ -27,5 +28,10 @@ class HomeCubit extends Cubit<HomeStates> {
   void changeBottom(int index) {
     currentIndex = index;
     emit(HomeBottomChange());
+  }
+
+  void toggleAttendanceRecord(String value) {
+    attendanceRecord = value;
+    emit(ToggleAttendance());
   }
 }

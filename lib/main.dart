@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Hospital',
           theme: ThemeData(
-            appBarTheme: const AppBarTheme(color: AppColors.whiteColor),
+            appBarTheme: const AppBarTheme(color: AppColors.appBackgroundColor),
             colorScheme:
                 ColorScheme.fromSeed(seedColor: AppColors.appBackgroundColor),
             scaffoldBackgroundColor: AppColors.appBackgroundColor,

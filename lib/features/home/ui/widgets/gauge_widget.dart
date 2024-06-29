@@ -71,6 +71,7 @@ class GaugeWidget extends StatelessWidget {
                     angle: 15,
                   ),
                 ],
+                labelsPosition: ElementsPosition.outside,
                 axisLabelStyle: const GaugeTextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

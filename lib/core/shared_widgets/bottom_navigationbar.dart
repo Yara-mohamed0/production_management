@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:production_management/core/theming/styles.dart';
 import 'package:production_management/features/home/logic/cubit/cubit.dart';
 import 'package:production_management/features/home/logic/cubit/state.dart';
 
@@ -47,22 +48,26 @@ class BottomNavigationWidget extends StatelessWidget {
                     cubit.changeBottom(index);
                   },
                   selectedIndex: cubit.currentIndex,
-                  tabs: const [
+                  tabs:  [
                     GButton(
                       icon: Icons.home_outlined,
                       text: "الرئيسية",
+                      textStyle: AppFonts.font12W700Primary,
                     ),
                     GButton(
                       icon: Icons.watch_later_outlined,
                       text: "تتبع ساعات العمل",
+                      textStyle: AppFonts.font12W700Primary,
                     ),
                     GButton(
                       icon: Icons.pie_chart_outline,
                       text: "تتبع الصيانة",
+                      textStyle: AppFonts.font12W700Primary,
                     ),
                     GButton(
                       icon: Icons.chat_sharp,
                       text: "التواصل الداخلي",
+                      textStyle: AppFonts.font12W700Primary,
                     ),
                   ],
                 ),
