@@ -21,6 +21,7 @@ abstract class AppColors {
   static const Color textGrey = Color(0xff838A93);
   static const Color ratingBackgroundGrey = Color(0xffF8F8F8);
   static const Color orText = Color(0xff64748B);
+  static const Color serviceConditions = Color(0xff484848);
 //red color
   static const Color redColor = Color(0xffCE0909);
   static const Color fireColor = Color(0xffE8899E);
@@ -36,7 +37,7 @@ abstract class AppColors {
   static const Color blueShadow = Color(0xffEBF8FE);
   static const Color medicineColor = Color(0xff7ACEFA);
   static const Color checkBoxColor = Color(0xff6D9CF9);
-  static const Color accentColor= Color(0xff3C9AFB);
+  static const Color accentColor = Color(0xff3C9AFB);
 
   //orange color
   static const Color orangeShadow = Color(0xffFEF6EC);

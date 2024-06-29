@@ -5,6 +5,7 @@ import 'package:production_management/core/theming/styles.dart';
 import '../../../../core/shared_widgets/shared_button.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../login/ui/screen/login_screen.dart';
+import '../../../signup/ui/screen/signup_page.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -36,10 +37,10 @@ class StartScreen extends StatelessWidget {
                           Expanded(
                             child: SharedButton(
                               function: () {
-                                // Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (context) => ReservationsScreen()));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SignUp()));
                               },
                               color: AppColors.whiteColor,
                               borderColor: AppColors.mainColor,
@@ -54,8 +55,7 @@ class StartScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => LoginScreen()
-                                  ),
+                                      builder: (context) => LoginScreen()),
                                 );
                               },
                               color: AppColors.mainColor,
