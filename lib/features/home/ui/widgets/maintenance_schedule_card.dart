@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:production_management/features/track_working_hours/ui/widgets/attendance_detail_row.dart';
 
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../core/shared_widgets/default_line.dart';
-import '../screen/edit_attendance.dart';
+import 'product_detail_row.dart';
 
-class AttendanceCard extends StatelessWidget {
-  const AttendanceCard({super.key});
+class MaintenanceScheduleCard extends StatelessWidget {
+  const MaintenanceScheduleCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +18,7 @@ class AttendanceCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -50,14 +50,6 @@ class AttendanceCard extends StatelessWidget {
                     style: AppFonts.font14W700Black,
                   ),
                 ),
-                const Spacer(),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.check_box_outline_blank_rounded,
-                    color: AppColors.onboardingGrey,
-                  ),
-                ),
               ],
             ),
             const SizedBox(
@@ -67,46 +59,49 @@ class AttendanceCard extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const AttendanceDetailsRow(
-              productDetail: 'اسم الموظف',
-              productName: 'محمد أحمد',
+            const ProductDetailsRow(
+              productDetail: 'الصيانة',
+              productName: 'فحص نظام التبريد',
             ),
             const SizedBox(
               height: 24,
             ),
-            const AttendanceDetailsRow(
-              productDetail: 'سجل الحضور',
-              productName: 'حاضر',
+            const ProductDetailsRow(
+              productDetail: 'التاريخ',
+              productName: '04/12/2019',
             ),
             const SizedBox(
-              height: 14,
+              height: 24,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.delete_outline,
-                    color: AppColors.textRed,
-                  ),
+                Text(
+                  'الحالة',
+                  style: AppFonts.font14W700ProductDetails,
                 ),
-                const SizedBox(
-                  width: 5,
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const EditAttendance()));
-                  },
-                  icon: const Icon(
-                    Icons.edit,
-                    color: AppColors.clockColor,
-                  ),
+                Text(
+                  'تمت',
+                  style: AppFonts.font14W700Green,
                 ),
               ],
-            )
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            const ProductDetailsRow(
+              productDetail: 'النتائج',
+              productName: '',
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+              '• تم استبدال السائل المبرد وتنظيف الفلاتر.', style: AppFonts.font14W700Black,
+              ),
+            ),
           ],
         ),
       ),

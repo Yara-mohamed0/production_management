@@ -12,7 +12,7 @@ import 'track_working_hours_screen.dart';
 
 // ignore: must_be_immutable
 class EditAttendance extends StatelessWidget {
-  EditAttendance({super.key});
+  const EditAttendance({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +132,7 @@ class EditAttendance extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    TrackWorkingHoursScreen()));
+                                    const TrackWorkingHoursScreen()));
                       },
                       color: AppColors.mainColor,
                       text: "حفظ",

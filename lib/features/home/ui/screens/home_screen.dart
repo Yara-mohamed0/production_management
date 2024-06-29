@@ -3,8 +3,8 @@ import 'package:production_management/core/theming/styles.dart';
 
 import '../widgets/current_state_listview.dart';
 import '../widgets/gauge_widget.dart';
-import '../widgets/historical_data_chart.dart';
-import '../widgets/home_header.dart';
+import '../../../../core/shared_widgets/historical_data_chart.dart';
+import '../../../../core/shared_widgets/header.dart';
 import '../widgets/percent_chart.dart';
 import '../widgets/production_details_listview.dart';
 import '../widgets/production_time.dart';
@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 28,
                 ),
-                const CustomBarChart(),
+                const CustomBarChart(text: 'البيانات التاريخية'),
                 const SizedBox(
                   height: 16,
                 ),

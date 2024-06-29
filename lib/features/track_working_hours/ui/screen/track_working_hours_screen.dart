@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../home/ui/widgets/home_header.dart';
+import '../../../../core/shared_widgets/header.dart';
 import '../widgets/attendance_listview.dart';
 import '../widgets/attendance_row.dart';
 import '../widgets/circular_chart.dart';

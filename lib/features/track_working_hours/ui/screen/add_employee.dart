@@ -129,7 +129,7 @@ class AddEmployee extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    TrackWorkingHoursScreen()));
+                                    const TrackWorkingHoursScreen()));
                       },
                       color: AppColors.mainColor,
                       text: "حفظ",
