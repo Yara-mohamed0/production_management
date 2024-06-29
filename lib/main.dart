@@ -24,10 +24,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Hospital',
           theme: ThemeData(
-            cardColor: AppColors.imageBackground,
             appBarTheme: const AppBarTheme(color: AppColors.whiteColor),
-            colorScheme: ColorScheme.fromSeed(seedColor: AppColors.whiteColor),
-            scaffoldBackgroundColor: Colors.white,
+            colorScheme:
+                ColorScheme.fromSeed(seedColor: AppColors.appBackgroundColor),
+            scaffoldBackgroundColor: AppColors.appBackgroundColor,
             useMaterial3: true,
           ),
           localizationsDelegates: const [

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/shared_widgets/shared_button.dart';
 import '../../../../../core/shared_widgets/text_button.dart';
 import '../../../../../core/theming/colors.dart';
+import '../../../../core/shared_widgets/bottom_navigationbar.dart';
 import '../../../../core/shared_widgets/default_text_form_field.dart';
 import '../../../../core/theming/styles.dart';
 
@@ -65,13 +65,15 @@ class LoginScreen extends StatelessWidget {
                               color: AppColors.lightGrey,
                             ),
                             validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'برجاء ادخل البريد الالكتروني';
-                              } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
-                                  .hasMatch(value)) {
-                                return 'برجاء ادخل بريد الكتروني متاح';
-                              }
                               return null;
+
+                              // if (value == null || value.isEmpty) {
+                              //   return 'برجاء ادخل البريد الالكتروني';
+                              // } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
+                              //     .hasMatch(value)) {
+                              //   return 'برجاء ادخل بريد الكتروني متاح';
+                              // }
+                              // return null;
                             },
                           ),
                           SizedBox(
@@ -127,11 +129,11 @@ class LoginScreen extends StatelessWidget {
                             color: AppColors.mainColor,
                             function: () {
                               if (formKey.currentState!.validate()) {
-                                // Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (context) =>
-                                //             PatientBottomNavigation()));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const BottomNavigationWidget()));
                               }
                             },
                             text: "تسجيل الدخول",
