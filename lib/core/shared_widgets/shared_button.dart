@@ -27,7 +27,7 @@ class SharedButton extends StatelessWidget {
   final double width;
   final double height;
   final double borderRadius;
-  final IconData? icon;
+  final String? icon;
   final bool isText;
   final TextStyle style;
 
@@ -49,10 +49,7 @@ class SharedButton extends StatelessWidget {
                 text!,
                 style: style,
               )
-            : Icon(
-                icon,
-                color: textColor,
-              ),
+            : Image.asset(icon!,width: 24,height: 24,),
       ),
     );
   }
