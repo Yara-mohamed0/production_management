@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../chats/ui/screen/chats_screen.dart';
-import '../screens/notifications.dart';
+import '../../../notifications/ui/screen/notifications.dart';
 
 class CommunicationRow extends StatelessWidget {
   const CommunicationRow({
