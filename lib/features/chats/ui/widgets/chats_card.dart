@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/styles.dart';
-import '../../../internal_communication/ui/screens/chat_screen.dart';
+import '../../../chat/ui/screen/chat_screen.dart';
 import 'image_shadow.dart';
 
 class ChatsCard extends StatelessWidget {
