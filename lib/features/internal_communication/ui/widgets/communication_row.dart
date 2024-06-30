@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
-import '../screens/chats_screen.dart';
+import '../../../chats/ui/screen/chats_screen.dart';
 import '../screens/notifications.dart';
 
 class CommunicationRow extends StatelessWidget {
