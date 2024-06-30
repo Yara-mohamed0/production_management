@@ -44,9 +44,44 @@ class PostCard extends StatelessWidget {
                   SizedBox(
                     width: 10.w,
                   ),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(FontAwesomeIcons.ellipsisVertical))
+                  PopupMenuButton<String>(
+                    icon: const Icon(FontAwesomeIcons.ellipsisVertical),
+                    color: AppColors.whiteColor,
+                    shadowColor: AppColors.imageBackground,
+                    surfaceTintColor: AppColors.whiteColor,
+                    onSelected: (value) {
+                      switch (value) {
+                        case 'delete':
+                          // Add your delete chat functionality here
+                          break;
+                        case 'block':
+                          // Add your block user functionality here
+                          break;
+                      }
+                    },
+                    itemBuilder: (BuildContext context) {
+                      return [
+                        PopupMenuItem(
+                          value: 'delete',
+                          child: Center(
+                            child: Text(
+                              'إلغاء التثبيت',
+                              style: AppFonts.font16W700RedColor,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'block',
+                          child: Center(
+                            child: Text(
+                              'إخفاء',
+                              style: AppFonts.font16W700GreyColor,
+                            ),
+                          ),
+                        ),
+                      ];
+                    },
+                  )
                 ]),
                 SizedBox(
                   height: 5.h,
