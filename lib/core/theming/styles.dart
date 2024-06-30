@@ -30,6 +30,12 @@ class AppFonts {
     color: AppColors.mainColor,
   );
 
+  static TextStyle font12W700LightGrey = GoogleFonts.cairo(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.lightGrey,
+  );
+
 
 
   static TextStyle font14W700White = GoogleFonts.cairo(

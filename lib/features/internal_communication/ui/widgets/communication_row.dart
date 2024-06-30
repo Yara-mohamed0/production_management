@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
+import '../screens/chats_screen.dart';
 
 
 class CommunicationRow extends StatelessWidget {
@@ -31,7 +32,9 @@ class CommunicationRow extends StatelessWidget {
               width: 8,
             ),
             IconButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const ChatsScreen()));
+              },
               icon: const Icon(
                 Icons.chat_sharp,
                 color: AppColors.productDetailsGrey,

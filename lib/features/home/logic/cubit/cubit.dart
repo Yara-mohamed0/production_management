@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../internal_communication/ui/screen/internal_communication_screen.dart';
+import '../../../internal_communication/ui/screens/internal_communication_screen.dart';
 import '../../../maintenance_status/ui/screen/maintenance_status_screen.dart';
 import '../../../track_working_hours/ui/screen/track_working_hours_screen.dart';
 import '../../ui/screens/home_screen.dart';
