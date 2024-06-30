@@ -3,26 +3,28 @@ import 'package:flutter/material.dart';
 class DefaultTextFormField extends StatelessWidget {
   const DefaultTextFormField(
       {super.key,
-        this.labelText,
-        this.prefixIcon,
-        this.controller,
-        required this.isPassword,
-        required this.color,
-        this.suffixIcon,
-        this.validator,
-         this.readOnly=false,
-        required this.style,
-        this.labelStyle,
-        required this.borderSide,
-        this.filled,
-        this.initialValue,
-        this.hintText,
-        this.hintStyle,
-        this.minLines,
-        this.maxLines,
-        this.suffixPressed,
-        this.suffixColor,
-        this.type});
+      this.labelText,
+      this.prefixIcon,
+      this.controller,
+      required this.isPassword,
+      required this.color,
+      this.suffixIcon,
+      this.validator,
+      this.readOnly = false,
+      required this.style,
+      this.labelStyle,
+      required this.borderSide,
+      this.filled,
+      this.initialValue,
+      this.hintText,
+      this.hintStyle,
+      this.minLines,
+      this.maxLines,
+      this.suffixPressed,
+      this.suffixColor,
+      this.type,
+      this.contentPadding =
+          const EdgeInsets.symmetric(vertical: 15, horizontal: 10)});
 
   final String? labelText;
   final Widget? prefixIcon;
@@ -44,6 +46,7 @@ class DefaultTextFormField extends StatelessWidget {
   final int? minLines;
   final int? maxLines;
   final TextInputType? type;
+  final EdgeInsetsGeometry contentPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -58,17 +61,16 @@ class DefaultTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         filled: filled,
         fillColor: color,
-        contentPadding:
-        const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+        contentPadding: contentPadding,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon != null
             ? IconButton(
-          onPressed: suffixPressed,
-          icon: Icon(
-            suffixIcon,
-            color: suffixColor,
-          ),
-        )
+                onPressed: suffixPressed,
+                icon: Icon(
+                  suffixIcon,
+                  color: suffixColor,
+                ),
+              )
             : null,
         hintText: hintText,
         hintStyle: hintStyle,
