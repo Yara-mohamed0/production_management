@@ -56,5 +56,6 @@ abstract class AppColors {
   static const Color limeGreen = Color(0xffE2F8E3);
   static const Color textGreen = Color(0xff04AD01);
   static const Color lightGreen = Color(0xffEFFBFB);
+  static const Color postBackground = Color(0xffD3E9E8);
 
 }
