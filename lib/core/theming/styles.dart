@@ -194,7 +194,7 @@ class AppFonts {
       color: AppColors.mainColor);
 
   static TextStyle font24W700Blue = GoogleFonts.cairo(
-      fontSize: 34.sp,
+      fontSize: 24.sp,
       fontWeight: FontWeightHelper.bold,
       color: AppColors.clockColor);
 
@@ -352,6 +352,11 @@ class AppFonts {
       fontSize: 12.sp,
       fontWeight: FontWeightHelper.regular,
       color: AppColors.blackColor.withOpacity(0.6));
+
+  static TextStyle font12W400Blue = GoogleFonts.cairo(
+      fontSize: 12.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: AppColors.clockColor);
 
   static TextStyle font14W400Black = GoogleFonts.cairo(
       fontSize: 14.sp,

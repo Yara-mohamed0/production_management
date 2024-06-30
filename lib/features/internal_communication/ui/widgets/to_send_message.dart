@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/shared_widgets/default_text_form_field.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 
@@ -13,12 +11,15 @@ class ToSendMessage extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       child: Row(
         children: [
+          _buildEmojiButton(),
+          const SizedBox(width: 5),
           Expanded(
             child: _buildMessageTextField(),
           ),
           const SizedBox(width: 5),
-          _buildVoiceInputButton(),
+          _buildAttachmentButton(),
           const SizedBox(width: 5),
+
           _buildSendButton(),
         ],
       ),
@@ -26,64 +27,67 @@ class ToSendMessage extends StatelessWidget {
   }
 
   Widget _buildMessageTextField() {
-    return DefaultTextFormField(
-
-      hintText: 'اكتب رسالتك...',
-      hintStyle: AppFonts.font12W600Grey,
-      filled: true,
-      isPassword: false,
-      color: AppColors.onboardingGrey,
-      readOnly: false,
-      style: AppFonts.font16W400Black,
-      borderSide: BorderSide.none,
-      prefixIcon: Row(
-        mainAxisSize: MainAxisSize.min, // Prevent unnecessary spacing
-        children: [
-          _buildIconButton(Icons.emoji_emotions_outlined, onPressed: () {}),
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(25),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: const Offset(0, 2), // changes position of shadow
+          ),
         ],
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+          hintText: 'اكتب رسالتك...',
+          hintStyle: AppFonts.font12W600Grey,
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          border: InputBorder.none,
+        ),
+        style: AppFonts.font16W400Black,
       ),
     );
   }
 
-  Widget _buildIconButton(IconData icon, {required VoidCallback onPressed}) {
+  Widget _buildIconButton(IconData icon, {required VoidCallback onPressed, required Color color}) {
     return IconButton(
       onPressed: onPressed,
       icon: Icon(
         icon,
-        color: AppColors.greyColor,
+        color: color,
       ),
-      padding: EdgeInsets.zero, // Remove default padding
-      constraints: const BoxConstraints(), // Remove default constraints
+      padding: EdgeInsets.zero,
+      constraints: const BoxConstraints(),
     );
   }
 
-  Widget _buildVoiceInputButton() {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.onboardingGrey,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child:  IconButton(
-        onPressed: (){},
-        icon: const Icon(
-          Icons.attach_file_outlined,
-          color: AppColors.greyColor,
-          size: 28,
-        ),
-      ),
+  Widget _buildEmojiButton() {
+    return _buildIconButton(
+      Icons.emoji_emotions_outlined,
+      onPressed: () {},
+      color: AppColors.greyColor,
+    );
+  }
+
+  Widget _buildAttachmentButton() {
+    return _buildIconButton(
+      Icons.attach_file_outlined,
+      onPressed: () {},
+      color: AppColors.greyColor,
     );
   }
 
   Widget _buildSendButton() {
-    return Padding(
-      padding: const EdgeInsets.only(top: 10.0),
-      child: IconButton(
-        onPressed: () {},
-        icon: const Icon(
-          Icons.send,
-          color: AppColors.mainColor,
-          size: 30,
-        ),
+    return FloatingActionButton(
+      onPressed: () {},
+      backgroundColor: AppColors.mainColor,
+      elevation: 2,
+      child: const Icon(
+        Icons.send,
+        color: AppColors.whiteColor,
       ),
     );
   }
