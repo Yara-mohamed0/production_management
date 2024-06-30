@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
-import 'image_shadow.dart';
+import '../../../chats/ui/widgets/image_shadow.dart';
 
 class PostCard extends StatelessWidget {
   const PostCard({super.key});

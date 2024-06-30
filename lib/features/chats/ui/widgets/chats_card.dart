@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/styles.dart';
-import '../screens/chat_screen.dart';
+import '../../../internal_communication/ui/screens/chat_screen.dart';
 import 'image_shadow.dart';
 
 class ChatsCard extends StatelessWidget {
@@ -12,15 +12,15 @@ class ChatsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const ChatScreen()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ChatScreen()));
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30),
         child: Row(
           children: [
             const ImageShadow(),
-             SizedBox(
+            SizedBox(
               width: 10.w,
             ),
             Expanded(
@@ -36,7 +36,7 @@ class ChatsCard extends StatelessWidget {
                         style: AppFonts.font16W700GreyColor,
                       ),
                     ),
-                     SizedBox(
+                    SizedBox(
                       width: 10.w,
                     ),
                     Text(
@@ -44,7 +44,7 @@ class ChatsCard extends StatelessWidget {
                       style: AppFonts.font12W400Black,
                     ),
                   ]),
-                   SizedBox(
+                  SizedBox(
                     height: 5.h,
                   ),
                   Padding(
